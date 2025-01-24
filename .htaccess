@@ -1,0 +1,38 @@
+RewriteEngine On
+
+RewriteRule ^cliente/?$ index.php?modulo=listar [NC]
+
+RewriteRule ^cliente/form/?$ index.php?modulo=form [NC]
+
+RewriteRule ^cliente/save/?$ index.php?modulo=save [NC]
+
+RewriteRule ^cliente/disable/?$ index.php?modulo=disable [NC]
+
+RewriteRule ^cliente/saveEdit/?$ index.php?modulo=saveEdit [NC]
+
+RewriteRule ^cliente/enderecos/?$ index.php?modulo=listEnderecos [NC]
+
+RewriteRule ^cliente/enderecos/disable?$ index.php?modulo=enderecoDisable [NC]
+
+RewriteRule ^cliente/enderecos/novoEndereco?$ index.php?modulo=novoEndereco [NC]
+
+RewriteRule ^cliente/endereco/saveEdit?$ index.php?modulo=saveEndereco [NC]
+
+RewriteRule ^user/?$ index.php?modulo=formUser [NC]
+
+RewriteRule ^user/register?$ index.php?modulo=register [NC]
+
+RewriteRule ^login/?$ index.php?modulo=loginUser [NC]
+
+RewriteRule ^logout/?$ index.php?modulo=logout [NC]
+
+RewriteRule ^user/gerenciaUser/?$ index.php?modulo=gerenciaUser [NC]
+
+RewriteRule ^user/saveEdit/?$ index.php?modulo=saveEditUser [NC]
+
+RewriteRule ^user/disable/?$ index.php?modulo=disableUser [NC]
+
+RewriteRule ^user/novoUser/?$ index.php?modulo=novoUser [NC]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)/?$ ./index.php?modulo=0
